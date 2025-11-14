@@ -1,0 +1,24 @@
+<odoo>
+    <record id="confirm_livestock_sale_wizard_form" model="ir.ui.view">
+        <field name="name">Confirmation Wizard</field>
+        <field name="model">confirmation.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="message" readonly="1" nolabel="1"/>
+                </group>
+                <footer>
+                <button name="submit" string="Confirm" type="object" class="btn-primary"/>
+                <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_open_confirm_livestock_sale_wizard" model="ir.actions.act_window">
+        <field name="name">Confirmation Wizard</field>
+        <field name="res_model">confirmation.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
